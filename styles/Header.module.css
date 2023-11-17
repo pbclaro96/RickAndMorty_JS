@@ -1,0 +1,18 @@
+.barra{
+    display: flex;
+    align-items: center;
+}
+@media (min-width: 320px){
+    .barra{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion{
+    margin-top: 3rem;
+}
+
+.logo{
+    margin-left: 3rem;
+}

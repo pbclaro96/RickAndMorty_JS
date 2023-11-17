@@ -1,0 +1,32 @@
+html,
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-image: url(../public/img/fondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+  }
+}
+
+[class*="contenedor"] {
+  width: 92%;
+  padding-bottom: 1em;
+}

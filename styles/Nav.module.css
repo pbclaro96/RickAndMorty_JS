@@ -1,0 +1,9 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor h3 {
+    margin-left: 1em; 
+    font-weight: 100;
+  }
