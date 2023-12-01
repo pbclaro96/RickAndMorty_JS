@@ -1,10 +1,11 @@
-import styles from '../styles/Footer.module.css'
+import Image from 'next/image'
+import Styles from '../styles/Footer.module.css'
 const Footer = () => {
     return (
-        <footer className={styles.footer}>
-            <img src='heart.png' />
+        <footer className={Styles.footer}>
+            <Image src={'/heart.png'} alt="personaje" width="32" height="32"/>
             <h1> Paola Barros</h1>
-            <img src='racoon.png' />
+            <Image src={'/racoon.png'} alt="personaje" width="32" height="32"/>
         </footer>
     )
 }

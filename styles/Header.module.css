@@ -1,18 +1,20 @@
-.barra{
+.barra {
     display: flex;
-    align-items: center;
-}
-@media (min-width: 320px){
-    .barra{
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    justify-content: center;
+    background-color: #210d86;
+    background-image: url(../public/img/fondoHeader.jpg);
+    background-position: right;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
-.navegacion{
+.navegacion {
     margin-top: 3rem;
 }
 
-.logo{
+.logo {
     margin-left: 3rem;
 }
+
+
+
+

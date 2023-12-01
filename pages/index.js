@@ -1,45 +1,33 @@
-import styles from '../styles/Home.module.css'
+import { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
-import Nav from '../components/Nav'
-import Footer from '../components/Footer'
-export default function Home({ character }) {
+import Grid from '../components/Grid'
+import Character from '../components/Character'
+import NextPrev from '../components/NextPrev';
+
+export default function Home({ characters: charactersProp }) {
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    const cha = async () => {
+      const resp = await fetch("https://rickandmortyapi.com/api/character")
+      const characterData = await resp.json()
+      setCharacters(characterData.results)
+    }
+
+    cha();
+
+  }, [])
+
   return (
     <div>
       <Layout pagina='Inicio'>
-      </Layout>
-
-      <div className={styles.contenedorPrincipal}>
-        {
-          character.map(cha => (
-            <div key={cha.id} className={styles.containerCharacters}>
-                <img src={cha.image} alt="personaje" />
-                <h2>{cha.name}</h2>
-                <h4>Estado: {cha.status}</h4>
-                <h4>Especie: {cha.species}</h4>
-                <h4>Género: {cha.gender}</h4>
-            </div>
-          ))
-
-        }
-      </div>
         <div>
-          <Nav></Nav>
+            <Grid characters={characters}
+              Pagina={Character}
+            />
+            <NextPrev/>
         </div>
-      <div>
-        <Footer></Footer>
-      </div>
+      </Layout>
     </div>
   )
-}
-export const getServerSideProps = async (context) => {
-  const res = await fetch("https://rickandmortyapi.com/api/character")
-  const characters = await res.json()
-
-  return {
-    props: {
-      character: characters.results
-    }
-
-  }
-
 }

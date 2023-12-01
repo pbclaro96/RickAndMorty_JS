@@ -1,0 +1,38 @@
+.contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    margin-bottom: 4vh;
+}
+
+.prev,
+.next {
+    width: 10vh;
+    height: 5vh;
+    background-color: #41D0FD;
+    color: black;
+    border: solid black 0.5px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.prev:hover,
+.prev:focus {
+    background-color: #F082AC;
+}
+
+.next:hover,
+.next:focus {
+    background-color: #F082AC;
+}

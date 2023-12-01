@@ -1,33 +1,27 @@
-import styles from '../styles/Grid.module.css'
-export default function Grid({ character }) {
+import { useState } from 'react'
+import Link from 'next/link'
+import Styles from '../styles/Grid.module.css'
+const Grid = ({ characters, Pagina }) => {
+    const [selectedCharacter, setSelectedCharacter] = useState(null);
+
+    const characterClick = (character) => {
+        setSelectedCharacter(character)
+    }
+
     return (
         <div>
-            <div>
-                {
-                    character.map(cha => (
-                        <div key={cha.id}>
-                            <img src={cha.image} alt="personaje" />
-                            <h4>{cha.name}</h4>
-                            <h4>{cha.status}</h4>
-                            <h4>{cha.species}</h4>
-                            <h4>{cha.gender}</h4>
-                        </div>
-                    ))
+            <div className={Styles.contenedorPrincipal}>
+                {characters.map(character => (
+                    <div>
+                        <Link href={`indexCharacter/${character.id}`}passHref>
+                            <Pagina character={character} />
+                        </Link>
+                    </div>
+                    
+                ))}
 
-                }
             </div>
         </div>
     )
 }
-export const getServerSideProps = async (context) => {
-    const res = await fetch("https://rickandmortyapi.com/api/character")
-    const characters = await res.json()
-
-    return {
-        props: {
-            character: characters.results
-        }
-
-    }
-
-}
+export default Grid

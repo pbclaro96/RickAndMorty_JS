@@ -1,30 +1,5 @@
 
 .contenedorPrincipal{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  padding-top: 2em;
-  padding-left: 5em;
-  text-align: center;
+  display: flex;
 }
 
-.containerCharacters{
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s;
-}
-
-.containerCharacters img{
-  border-radius: 50%;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
-}
-
-
-
-
-
-@media (min-width: 320px){
-  .containerCharacters img{
-    color:aliceblue;
-  }
-}

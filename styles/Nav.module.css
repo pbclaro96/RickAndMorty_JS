@@ -1,9 +1,30 @@
-.contenedor{
+.contenedor {
     display: flex;
     justify-content: center;
+    background: linear-gradient(to left, #c3f642, #41D0FD);
+    background-color: #E6F642;
 }
 
-.contenedor h3 {
-    margin-left: 1em; 
+.Link {
+    margin: 0.5em;
+    font-size: 2em;
     font-weight: 100;
-  }
+    color: black;
+}
+
+.Image {
+    margin: 0.8em;
+}
+
+@media (min-width: 280px) {
+    .Link {
+        margin: 0.5em;
+        font-size: 1.5em;
+        font-weight: 100;
+        color: black;
+    }
+
+    .Image {
+        margin: 0.5em;
+    }
+}
