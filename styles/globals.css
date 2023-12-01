@@ -35,10 +35,9 @@ a {
   body {
     background-color: #F8FBD9;
     background: linear-gradient(to bottom left, whitesmoke);
-    background-position: center center;
+    background-position: bottom left;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-
+    background-image: url(../public/img/rmFondo.png);
   }
 }

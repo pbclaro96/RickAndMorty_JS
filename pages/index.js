@@ -9,7 +9,7 @@ export default function Home({ characters: charactersProp }) {
 
   useEffect(() => {
     const cha = async () => {
-      const resp = await fetch("https://rickandmortyapi.com/api/character")
+      const resp = await fetch("https://rickandmortyapi.com/api/character?page=1")
       const characterData = await resp.json()
       setCharacters(characterData.results)
     }
