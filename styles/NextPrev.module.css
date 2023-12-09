@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     padding: 2em;
-    margin-bottom: 4vh;
     backdrop-filter: blur(2px);
+    height: 4em;
 }
 
 .prev,
@@ -28,9 +28,9 @@
 }
 
 .prev:hover {
-    background-color: #F082AC;
+    background-color: #c3f642;
 }
 
 .next:hover {
-    background-color: #F082AC;
+    background-color: #c3f642;
 }
